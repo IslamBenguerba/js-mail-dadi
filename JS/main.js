@@ -21,3 +21,22 @@ function ricerca() {
     }
     
 }
+// -----------------------SECONDO ESERCIZIO---------------------------------
+const btnNumeri = document.getElementById('btn-numeri')
+btnNumeri.addEventListener("click",confronto)
+function confronto(){
+    const numeroTuo = document.getElementById('numeroin').value
+    let numerowriteTuo = document.getElementById('il-tuo-numero')
+    let Vincitore = document.getElementById('winner')
+    let numeropc =  Math.floor(Math.random()*6 )
+    let numerowritePc = document.getElementById('il-numero-pc')
+    numerowritePc.innerHTML = `il numero del pc ${numeropc} `
+    numerowriteTuo.innerHTML = `il  numero  ${numeroTuo}`
+    if (numeroTuo < numeropc){
+        Vincitore.innerHTML = `il numero vincente è ${numeropc}`
+    }else if (numeroTuo > numeropc){
+        Vincitore.innerHTML = `il numero vincente è ${numeroTuo}`
+    }
+
+}
+
